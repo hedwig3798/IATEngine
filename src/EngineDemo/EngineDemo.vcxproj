@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cccd3c5f-2d51-4d6a-bdda-7821a3f3e7f2}</ProjectGuid>
+    <RootNamespace>EngineDemo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\output\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+    <VcpkgEnabled>true</VcpkgEnabled>
+    <VcpkgAutoLink>true</VcpkgAutoLink>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThruthGameEngine\;$(SolutionDir)Utils;$(SolutionDir)IdealGraphics\GraphicsEngine\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Debuglib\GameEngine\ThruthGameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThruthGameEngine\;$(SolutionDir)Utils;$(SolutionDir)IdealGraphics\GraphicsEngine\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ReleaseLib\GameEngine\ThruthGameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AnchorCamera.h" />
+    <ClInclude Include="AnimationState.h" />
+    <ClInclude Include="AutoTarget.h" />
+    <ClInclude Include="BezierShooter.h" />
+    <ClInclude Include="BossAnimator.h" />
+    <ClInclude Include="BossSkill.h" />
+    <ClInclude Include="BossHPUI.h" />
+    <ClInclude Include="Bullet.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="BulletMove.h" />
+    <ClInclude Include="ButtonTest.h" />
+    <ClInclude Include="ClearUI.h" />
+    <ClInclude Include="CombatZone.h" />
+    <ClInclude Include="ComponentBase.h" />
+    <ClInclude Include="CutSceneTrigger.h" />
+    <ClInclude Include="DamageSystem.h" />
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="DotDamage.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyAnimator.h" />
+    <ClInclude Include="EnemyController.h" />
+    <ClInclude Include="EngineDemo.h" />
+    <ClInclude Include="ExitButton.h" />
+    <ClInclude Include="FailedUI.h" />
+    <ClInclude Include="FailedButton.h" />
+    <ClInclude Include="FixedCamera.h" />
+    <ClInclude Include="FollowPointLight.h" />
+    <ClInclude Include="FrameUI.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="HitStop.h" />
+    <ClInclude Include="LoadingUI.h" />
+    <ClInclude Include="MapMoveTrigger.h" />
+    <ClInclude Include="MeleeWeapon.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerAnimator.h" />
+    <ClInclude Include="PlayerCamera.h" />
+    <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PlayerCPUI.h" />
+    <ClInclude Include="PlayerHPTextUI.h" />
+    <ClInclude Include="PlayerHPUI.h" />
+    <ClInclude Include="PlayerSkill.h" />
+    <ClInclude Include="RangedWeapon.h" />
+    <ClInclude Include="RangerAnimator.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Shooter.h" />
+    <ClInclude Include="SimpleDamager.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="SkillTree.h" />
+    <ClInclude Include="StageBGM.h" />
+    <ClInclude Include="StartButton.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestEffectGenerator.h" />
+    <ClInclude Include="TestMovement.h" />
+    <ClInclude Include="TimeDistortion.h" />
+    <ClInclude Include="TitleUI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnchorCamera.cpp" />
+    <ClCompile Include="AnimationState.cpp" />
+    <ClCompile Include="AutoTarget.cpp" />
+    <ClCompile Include="BezierShooter.cpp" />
+    <ClCompile Include="BossAnimator.cpp" />
+    <ClCompile Include="BossSkill.cpp" />
+    <ClCompile Include="BossHPUI.cpp" />
+    <ClCompile Include="Bullet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BulletMove.cpp" />
+    <ClCompile Include="ButtonTest.cpp" />
+    <ClCompile Include="ClearUI.cpp" />
+    <ClCompile Include="CombatZone.cpp" />
+    <ClCompile Include="ComponentBase.cpp" />
+    <ClCompile Include="CutSceneTrigger.cpp" />
+    <ClCompile Include="DamageSystem.cpp" />
+    <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="DotDamage.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyAnimator.cpp" />
+    <ClCompile Include="EnemyController.cpp" />
+    <ClCompile Include="EngineDemo.cpp" />
+    <ClCompile Include="ExitButton.cpp" />
+    <ClCompile Include="FailedUI.cpp" />
+    <ClCompile Include="FailedButton.cpp" />
+    <ClCompile Include="FixedCamera.cpp" />
+    <ClCompile Include="FollowPointLight.cpp" />
+    <ClCompile Include="FrameUI.cpp" />
+    <ClCompile Include="HitStop.cpp" />
+    <ClCompile Include="LoadingUI.cpp" />
+    <ClCompile Include="MapMoveTrigger.cpp" />
+    <ClCompile Include="MeleeWeapon.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerAnimator.cpp" />
+    <ClCompile Include="PlayerCamera.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PlayerCPUI.cpp" />
+    <ClCompile Include="PlayerHPTextUI.cpp" />
+    <ClCompile Include="PlayerHPUI.cpp" />
+    <ClCompile Include="PlayerSkill.cpp" />
+    <ClCompile Include="RangedWeapon.cpp" />
+    <ClCompile Include="RangerAnimator.cpp" />
+    <ClCompile Include="Shooter.cpp" />
+    <ClCompile Include="SimpleDamager.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="SkillTree.cpp" />
+    <ClCompile Include="StageBGM.cpp" />
+    <ClCompile Include="StartButton.cpp" />
+    <ClCompile Include="TestEffectGenerator.cpp" />
+    <ClCompile Include="TestMovement.cpp" />
+    <ClCompile Include="TimeDistortion.cpp" />
+    <ClCompile Include="TitleUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EngineDemo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\ICon\main_gear_light.ico" />
+    <Image Include="EngineDemo.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\CeniData\BossTest.yaml" />
+    <None Include="..\Resources\CeniData\testCamera.yaml" />
+    <None Include="..\Resources\Particles\Beam.yaml" />
+    <None Include="..\Resources\Particles\Beam1.yaml" />
+    <None Include="..\Resources\Particles\Beam2.yaml" />
+    <None Include="..\Resources\Particles\BlackHole.yaml" />
+    <None Include="..\Resources\Particles\BlackHoleSphere.yaml" />
+    <None Include="..\Resources\Particles\ComAttack.yaml" />
+    <None Include="..\Resources\Particles\ComAttack2.yaml" />
+    <None Include="..\Resources\Particles\DodgeAttack.yaml" />
+    <None Include="..\Resources\Particles\Fire.yaml" />
+    <None Include="..\Resources\Particles\Fire_1.yaml" />
+    <None Include="..\Resources\Particles\MagicCircle.yaml" />
+    <None Include="..\Resources\Particles\NorAttack.yaml" />
+    <None Include="..\Resources\Particles\NorAttack_S.yaml" />
+    <None Include="..\Resources\Particles\ShootImpact.yaml" />
+    <None Include="..\Resources\Particles\SpearImpact.yaml" />
+    <None Include="..\Resources\Particles\SpearImpact1.yaml" />
+    <None Include="..\Resources\Particles\SpearImpact2.yaml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\boost.1.85.0\build\boost.targets" Condition="Exists('..\packages\boost.1.85.0\build\boost.targets')" />
+    <Import Project="..\packages\boost_serialization-vc143.1.85.0\build\boost_serialization-vc143.targets" Condition="Exists('..\packages\boost_serialization-vc143.1.85.0\build\boost_serialization-vc143.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\boost.1.85.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.85.0\build\boost.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_serialization-vc143.1.85.0\build\boost_serialization-vc143.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_serialization-vc143.1.85.0\build\boost_serialization-vc143.targets'))" />
+  </Target>
+</Project>

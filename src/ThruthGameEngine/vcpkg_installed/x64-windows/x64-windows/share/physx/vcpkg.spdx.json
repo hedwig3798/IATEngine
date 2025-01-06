@@ -1,0 +1,169 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/physx-x64-windows-5.2.1-3a458d82-0d1c-439a-b9d1-4b6e43ccf0ed",
+  "name": "physx:x64-windows@5.2.1 2199a86c1ed36cd52a776d075b05f07e1e7f79ede16bd3d4983b4d1f0ca341ca",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-d6945642ee5c3076addd1a42c331bbf4cfc97457"
+    ],
+    "created": "2024-05-02T10:44:39Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "physx",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "5.2.1",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@9663323fd4b0d5ff6623bad944b8f60ea2455821",
+      "homepage": "https://github.com/NVIDIA-Omniverse/PhysX",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The NVIDIA PhysX SDK is a scalable multi-platform physics solution supporting a wide range of devices, from smartphones to high-end multicore CPUs and GPUs. This is the latest NVIDIA official version of the PhysX engine which also directly integrates into Omniverse. This port is NOT officially supported by NVIDIA.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "physx:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "2199a86c1ed36cd52a776d075b05f07e1e7f79ede16bd3d4983b4d1f0ca341ca",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "NVIDIA-Omniverse/PhysX",
+      "downloadLocation": "git+https://github.com/NVIDIA-Omniverse/PhysX@105.0-physx-5.2.1",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "d1c27d79d9c54a6ea0a79f5fa3ccd0b7821a48116c765b185442809d21fdd20086e2bfd6408d8a87e1507e0b951f1d9efb794f33d53bc05ab017fa50a41ba770"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-resource-2",
+      "name": "PhysXGpu.7z",
+      "packageFileName": "PhysXGpu.7z",
+      "downloadLocation": "https://d4i3qtqj3r0z5.cloudfront.net/PhysXGpu%40105.0-5.2.498.33012328-public-signed.7z",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "b834d4e0ed7d015d33d03862e30ad8296974e605bd4de49d9cfa168958d8e3b67a9b52cc1f2169f25c32211e1880de1ff7f76edae4d4a1b1f12dc6d1873c2d8e"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/user/AppData/Local/vcpkg/registries/git-trees/9663323fd4b0d5ff6623bad944b8f60ea2455821/omniverse-physx-sdk-config.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3d20744cc7e0077cd5816df1543fd0cf11b0e61bee4fbae7bbaf7b1a83540534"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/user/AppData/Local/vcpkg/registries/git-trees/9663323fd4b0d5ff6623bad944b8f60ea2455821/portfile.cmake",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2b15f76247809a11b367ad7da1ec51c93881730d3e82680bb16b5ace949c9929"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/user/AppData/Local/vcpkg/registries/git-trees/9663323fd4b0d5ff6623bad944b8f60ea2455821/usage",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "16936e0e410eee217361715b9cfbbf973683dbf4df9ef7148419776041c98117"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/user/AppData/Local/vcpkg/registries/git-trees/9663323fd4b0d5ff6623bad944b8f60ea2455821/vcpkg.json",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2f9944e987bb068e27e13f91503e391ac92c63b91da0205426aef02973999543"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

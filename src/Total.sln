@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IdealGraphics", "IdealGraphics\IdealGraphics.vcxproj", "{871DB19D-1631-4C76-A837-5BF336111A48}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThruthGameEngine", "ThruthGameEngine\ThruthGameEngine.vcxproj", "{50731C58-DA26-4715-BC5A-28504949FD4A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{871DB19D-1631-4C76-A837-5BF336111A48} = {871DB19D-1631-4C76-A837-5BF336111A48}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chronos", "Chronos\Chronos.vcxproj", "{964F005C-4327-45BE-93CF-F82FB657713D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50731C58-DA26-4715-BC5A-28504949FD4A} = {50731C58-DA26-4715-BC5A-28504949FD4A}
+		{871DB19D-1631-4C76-A837-5BF336111A48} = {871DB19D-1631-4C76-A837-5BF336111A48}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Debug|x64.ActiveCfg = Debug|x64
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Debug|x64.Build.0 = Debug|x64
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Debug|x86.ActiveCfg = Debug|Win32
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Debug|x86.Build.0 = Debug|Win32
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Release|x64.ActiveCfg = Release|x64
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Release|x64.Build.0 = Release|x64
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Release|x86.ActiveCfg = Release|Win32
+		{871DB19D-1631-4C76-A837-5BF336111A48}.Release|x86.Build.0 = Release|Win32
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Debug|x64.ActiveCfg = Debug|x64
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Debug|x64.Build.0 = Debug|x64
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Debug|x86.Build.0 = Debug|Win32
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Release|x64.ActiveCfg = Release|x64
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Release|x64.Build.0 = Release|x64
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Release|x86.ActiveCfg = Release|Win32
+		{50731C58-DA26-4715-BC5A-28504949FD4A}.Release|x86.Build.0 = Release|Win32
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Debug|x64.ActiveCfg = Debug|x64
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Debug|x64.Build.0 = Debug|x64
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Debug|x86.ActiveCfg = Debug|Win32
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Debug|x86.Build.0 = Debug|Win32
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Release|x64.ActiveCfg = Release|x64
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Release|x64.Build.0 = Release|x64
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Release|x86.ActiveCfg = Release|Win32
+		{964F005C-4327-45BE-93CF-F82FB657713D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE381F8F-6F7C-411F-B4A8-C33C01C7A7BB}
+	EndGlobalSection
+EndGlobal
