@@ -1,8 +1,6 @@
 #include "Animator.h"
 #include "SkinnedMesh.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Animator)
-
 // GraphEditor::Options Truth::Animator::options;
 // Truth::GraphEditorDelegate Truth::Animator::delegate;
 // GraphEditor::ViewState Truth::Animator::viewState;

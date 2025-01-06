@@ -19,14 +19,6 @@ namespace Truth
 	protected:
 		std::shared_ptr<Ideal::ICamera> m_camera;
 
-	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
-
 		PROPERTYM(fov, 0.02f, 1.0f);
 		float m_fov;
 		PROPERTY(aspect);
@@ -75,26 +67,4 @@ namespace Truth
 
 		void DefaultUpdate();
 	};
-
-	template<class Archive>
-	void Truth::Camera::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_fov;
-		_ar& m_aspect;
-		_ar& m_nearZ;
-		_ar& m_farZ;
-	}
-
-	template<class Archive>
-	void Truth::Camera::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_fov;
-		_ar& m_aspect;
-		_ar& m_nearZ;
-		_ar& m_farZ;
-	}
 }
-BOOST_CLASS_EXPORT_KEY(Truth::Camera)
-BOOST_CLASS_VERSION(Truth::Camera, 0)

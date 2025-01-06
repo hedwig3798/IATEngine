@@ -16,17 +16,6 @@ namespace Truth
 	{
 		GENERATE_CLASS_TYPE_INFO(ButtonBehavior);
 
-	private:
-		friend class boost::serialization::access;
-		friend class UI;
-
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
-
 	protected:
 		std::weak_ptr<Managers> m_managers;
 		std::weak_ptr<UI> m_UI;
@@ -50,19 +39,4 @@ namespace Truth
 		virtual void Awake() {};
 		virtual void Start() {};
 	};
-
-	template<class Archive>
-	void Truth::ButtonBehavior::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& m_name;
-	}
-
-	template<class Archive>
-	void Truth::ButtonBehavior::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& m_name;
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::ButtonBehavior)
-BOOST_CLASS_VERSION(Truth::ButtonBehavior, 0)

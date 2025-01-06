@@ -6,13 +6,6 @@ namespace Truth
 		public Component
 	{
 		GENERATE_CLASS_TYPE_INFO(SpotLight);
-	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 		std::shared_ptr<Ideal::ISpotLight> m_spotLight;
 	public:
@@ -62,34 +55,5 @@ namespace Truth
 		virtual void EditorSetValue();
 #endif // EDITOR_MODE
 	};
-	template<class Archive>
-	void Truth::SpotLight::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_position;
-		_ar& m_direction;
-		_ar& m_angle;
-		_ar& m_range;
-		_ar& m_intensity;
-		_ar& m_softness;
-		_ar& m_lightColor;
-	}
-
-	template<class Archive>
-	void Truth::SpotLight::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_position;
-		_ar& m_direction;
-		_ar& m_angle;
-		_ar& m_range;
-		_ar& m_intensity;
-		_ar& m_softness;
-		_ar& m_lightColor;
-
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::SpotLight)
-BOOST_CLASS_VERSION(Truth::SpotLight, 0)
 

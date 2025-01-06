@@ -23,14 +23,6 @@ namespace Truth
 		GENERATE_CLASS_TYPE_INFO(Controller);
 
 	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
-
-	private:
 		bool m_CCTPass = false;
 
 		physx::PxController* m_controller;
@@ -105,36 +97,4 @@ namespace Truth
 
 		std::shared_ptr<Truth::RigidBody> GetRigidbody() const { return m_rigidbody; }
 	};
-
-	template<class Archive>
-	void Truth::Controller::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-
-		_ar& m_height;
-		_ar& m_contactOffset;
-		_ar& m_stepOffset;
-		_ar& m_radius;
-		_ar& m_upDirection;
-		_ar& m_material;
-		_ar& m_climbingmode;
-	}
-
-	template<class Archive>
-	void Truth::Controller::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		if (file_version > 0)
-		{
-			_ar& m_height;
-			_ar& m_contactOffset;
-			_ar& m_stepOffset;
-			_ar& m_radius;
-			_ar& m_upDirection;
-			_ar& m_material;
-			_ar& m_climbingmode;
-		}
-	}
 }
-BOOST_CLASS_EXPORT_KEY(Truth::Controller)
-BOOST_CLASS_VERSION(Truth::Controller, 1)

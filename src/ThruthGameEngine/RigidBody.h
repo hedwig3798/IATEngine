@@ -19,14 +19,6 @@ namespace Truth
 		public Component
 	{
 		GENERATE_CLASS_TYPE_INFO(RigidBody);
-	private:
-		friend class Controller;
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 	public:
 		PROPERTY(mass);
@@ -107,35 +99,4 @@ namespace Truth
 
 		void CalculateMassCenter();
 	};
-
-
-	template<class Archive>
-	void Truth::RigidBody::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-
-		_ar& m_mass;
-		_ar& m_drag;
-		_ar& m_angularDrag;
-		_ar& m_useGravity;
-		_ar& m_isKinematic;
-		_ar& m_freezePosition;
-		_ar& m_freezeRotation;
-	}
-
-	template<class Archive>
-	void Truth::RigidBody::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-
-		_ar& m_mass;
-		_ar& m_drag;
-		_ar& m_angularDrag;
-		_ar& m_useGravity;
-		_ar& m_isKinematic;
-		_ar& m_freezePosition;
-		_ar& m_freezeRotation;
-	}
 }
-BOOST_CLASS_EXPORT_KEY(Truth::RigidBody)
-BOOST_CLASS_VERSION(Truth::RigidBody, 0)

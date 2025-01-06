@@ -3,8 +3,6 @@
 #include "GraphicsManager.h"
 #include "ICamera.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::FreeCamera)
-
 Truth::FreeCamera::FreeCamera()
 	: Camera()
 	, m_speed(50.0f)

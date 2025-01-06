@@ -22,13 +22,6 @@ namespace Truth
 		GENERATE_CLASS_TYPE_INFO(UI);
 
 	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 		enum class BUTTON_STATE
 		{
@@ -114,54 +107,5 @@ namespace Truth
 		virtual void EditorSetValue();
 #endif // EDITOR_MODE
 	};
-
-
-	template<class Archive>
-	void Truth::UI::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		for (int i = 0; i < 3; i++)
-			_ar& m_texturePath[i];
-
-		_ar& m_size;
-		_ar& m_position;
-		_ar& m_alpha;
-		_ar& m_zDepth;
-		_ar& m_behavior;
-		_ar& m_scale;
-		_ar& m_minSampling;
-		_ar& m_maxSampling;
-		_ar& m_isButton;
-	}
-
-	template<class Archive>
-	void Truth::UI::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		for (int i = 0; i < 3; i++)
-			_ar& m_texturePath[i];
-
-		_ar& m_size;
-		_ar& m_position;
-		_ar& m_alpha;
-		_ar& m_zDepth;
-
-		if (file_version >= 1)
-			_ar& m_behavior;
-
-		if (file_version >= 2)
-			_ar& m_scale;
-
-		if (file_version >= 3)
-		{
-			_ar& m_minSampling;
-			_ar& m_maxSampling;
-		}
-		if (file_version >= 4)
-			_ar& m_isButton;
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::UI)
-BOOST_CLASS_VERSION(Truth::UI, 4)
 

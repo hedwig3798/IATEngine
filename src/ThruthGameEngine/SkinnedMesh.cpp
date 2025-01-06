@@ -8,8 +8,6 @@
 #include "Imesh.h"
 #include "IMaterial.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::SkinnedMesh)
-
 /// <summary>
 /// 경로를 지정한 생성자
 /// </summary>

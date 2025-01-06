@@ -10,8 +10,6 @@
 #include "IMaterial.h"
 #include "Transform.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Mesh)
-
 /// <summary>
 /// »ý¼ºÀÚ
 /// </summary>

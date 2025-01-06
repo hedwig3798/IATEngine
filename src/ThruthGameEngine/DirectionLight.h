@@ -6,13 +6,6 @@ namespace Truth
 		public Component
 	{
 		GENERATE_CLASS_TYPE_INFO(DirectionLight);
-	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 		std::shared_ptr<Ideal::IDirectionalLight> m_directionalLight;
 	public:
@@ -52,33 +45,4 @@ namespace Truth
 #endif // EDITOR_MODE
 
 	};
-
-	template<class Archive>
-	void Truth::DirectionLight::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		if (file_version >= 1)
-		{
-			_ar& m_direction;
-		}
-		if (file_version >= 3)
-		{
- 			_ar& m_intensity;
- 			_ar& m_diffuseColor;
- 			_ar& m_ambientColor;
-		}
-	}
-
-	template<class Archive>
-	void Truth::DirectionLight::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_direction;
- 		_ar& m_intensity;
- 		_ar& m_diffuseColor;
- 		_ar& m_ambientColor;
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::DirectionLight)
-BOOST_CLASS_VERSION(Truth::DirectionLight, 3)

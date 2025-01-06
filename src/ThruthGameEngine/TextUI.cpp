@@ -6,8 +6,6 @@
 #include "InputManager.h"
 #include "ButtonBehavior.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::TextUI)
-
 /// <summary>
 /// »ý¼ºÀÚ
 /// </summary>

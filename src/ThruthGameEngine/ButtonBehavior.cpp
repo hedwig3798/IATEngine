@@ -1,5 +1,4 @@
 #include "ButtonBehavior.h"
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::ButtonBehavior)
 
 Truth::ButtonBehavior::ButtonBehavior()
 	: m_managers()

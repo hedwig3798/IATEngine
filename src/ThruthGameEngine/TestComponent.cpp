@@ -1,8 +1,6 @@
 #include "TestComponent.h"
 #include "Managers.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::TestComponent)
-
 Truth::TestComponent::TestComponent()
 	: Component()
 {

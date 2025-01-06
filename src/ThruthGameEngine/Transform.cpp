@@ -1,8 +1,6 @@
 #include "Transform.h"
 #include "Managers.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Transform)
-
 Truth::Transform::Transform()
 	: Component()
 	, m_position(0.0f, 0.0f, 0.0f)

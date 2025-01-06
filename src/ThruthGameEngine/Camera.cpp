@@ -5,8 +5,6 @@
 #include "InputManager.h"
 #include "GraphicsManager.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Camera)
-
 Truth::Camera::Camera()
 	: Component()
 	, m_fov(0.25f * 3.141592f)

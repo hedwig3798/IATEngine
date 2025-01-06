@@ -119,10 +119,7 @@ void Truth::SceneManager::ChangeScene()
 	m_currentScene->Exit();
 	m_currentScene.reset();
 
-	std::ifstream inputstream(m_savedFilePath + m_nextSceneName + ".scene");
-	boost::archive::text_iarchive inputArchive(inputstream);
 	std::shared_ptr<Truth::Scene> s;
-	inputArchive >> s;
 
 	m_currentScene = s;
 	m_currentScene->Initalize(m_mangers);
@@ -147,9 +144,7 @@ void Truth::SceneManager::ResetScene() const
 /// </summary>
 void Truth::SceneManager::SaveCurrentScene() const
 {
-	std::ofstream outputstream(m_savedFilePath + m_currentScene->m_name + ".scene");
-	boost::archive::text_oarchive outputArchive(outputstream);
-	outputArchive << m_currentScene;
+	// TODO: Add Feature
 }
 
 /// <summary>
@@ -157,16 +152,12 @@ void Truth::SceneManager::SaveCurrentScene() const
 /// </summary>
 void Truth::SceneManager::SaveScene(std::shared_ptr<Scene> _scene) const
 {
-	std::ofstream outputstream(m_savedFilePath + _scene->m_name + ".scene");
-	boost::archive::text_oarchive outputArchive(outputstream);
-	outputArchive << _scene;
+	// TODO: Add Feature
 }
 
 void Truth::SceneManager::SaveAsScene(std::wstring& _path) const
 {
-	std::ofstream outputstream(_path);
-	boost::archive::text_oarchive outputArchive(outputstream);
-	outputArchive << m_currentScene;
+	// TODO: Add Feature
 }
 
 /// <summary>
@@ -176,37 +167,10 @@ void Truth::SceneManager::SaveAsScene(std::wstring& _path) const
 /// <param name="_path">Scene 파일 경로</param>
 void Truth::SceneManager::LoadSceneData(std::wstring _path)
 {
-	std::ifstream inputstream(_path);
-	boost::archive::text_iarchive inputArchive(inputstream);
-	std::shared_ptr<Truth::Scene> s;
-	inputArchive >> s;
-
-	if (m_currentScene != nullptr)
-	{
-		m_currentScene->Exit();
-		m_currentScene.reset();
-	}
-
-	m_currentScene = s;
- 	m_currentScene->Initalize(m_mangers);
- 	m_currentScene->Enter();
+	// TODO: Add Feature
 }
 
 void Truth::SceneManager::ReloadSceneData()
 {
-	std::string sceneName = m_currentScene->m_name;
-	std::ifstream inputstream(m_savedFilePath + sceneName + ".scene");
-	boost::archive::text_iarchive inputArchive(inputstream);
-	std::shared_ptr<Truth::Scene> s;
-	inputArchive >> s;
-
-	if (m_currentScene != nullptr)
-	{
-		m_currentScene->Exit();
-		m_currentScene.reset();
-	}
-
-	m_currentScene = s;
- 	m_currentScene->Initalize(m_mangers);
- 	m_currentScene->Enter();
+	// TODO: Add Feature
 }

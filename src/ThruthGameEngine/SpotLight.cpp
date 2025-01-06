@@ -4,8 +4,6 @@
 #include "Entity.h"
 #include "Transform.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::SpotLight)
-
 Truth::SpotLight::SpotLight()
 	: Component()
 	, m_isRendering(true)

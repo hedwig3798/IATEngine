@@ -4,10 +4,6 @@
 #include "Entity.h"
 #include "Transform.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::DirectionLight)
-
-
-
 Truth::DirectionLight::DirectionLight()
 	: Component()
 	, m_isRendering(true)

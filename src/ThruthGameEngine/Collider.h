@@ -25,14 +25,6 @@ namespace Truth
 		: public Component
 	{
 		GENERATE_CLASS_TYPE_INFO(Collider);
-	private:
-		friend class Controller;
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 	protected:
 		ColliderShape m_shape;
@@ -121,30 +113,9 @@ namespace Truth
 	private:
 	};
 
-	template<class Archive>
-	void Truth::Collider::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_isTrigger;
-		_ar& m_center;
-		_ar& m_size;
-	}
-
-	template<class Archive>
-	void Truth::Collider::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_isTrigger;
-		_ar& m_center;
-		_ar& m_size;
-	}
-
 	struct Collision
 	{
 		std::weak_ptr<Collider> m_collA;
 		std::weak_ptr<Collider> m_collB;
 	};
 }
-BOOST_SERIALIZATION_ASSUME_ABSTRACT(Truth::Collider)
-BOOST_CLASS_EXPORT_KEY(Truth::Collider)
-BOOST_CLASS_VERSION(Truth::Collider, 0)

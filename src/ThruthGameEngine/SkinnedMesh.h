@@ -14,14 +14,6 @@ namespace Truth
 		GENERATE_CLASS_TYPE_INFO(SkinnedMesh);
 
 	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
-
-	private:
 		std::weak_ptr<Ideal::ISkinnedMeshObject> m_skinnedMesh;
 		std::weak_ptr<Ideal::IAnimation> m_animation;
 
@@ -94,37 +86,4 @@ namespace Truth
 #endif // EDITOR_MODE
 
 	};
-
-	template<class Archive>
-	void Truth::SkinnedMesh::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_path;
-		if (file_version >= 1)
-		{
-			size_t matSize;
-			_ar& matSize;
-			for (size_t i = 0; i < matSize ; i++)
-			{
-				std::string matPath;
-				_ar& matPath;
-				m_matPath.push_back(matPath);
-			}
-		}
-	}
-
-	template<class Archive>
-	void Truth::SkinnedMesh::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_path;
-		_ar& m_mat.size();
-		for (auto& m : m_mat)
-		{
-			_ar& m->m_path;
-		}
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::SkinnedMesh)
-BOOST_CLASS_VERSION(Truth::SkinnedMesh, 1)
