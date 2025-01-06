@@ -8,13 +8,6 @@ namespace Truth
 		public Truth::Component
 	{
 		GENERATE_CLASS_TYPE_INFO(Transform);
-	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 
 	public:
@@ -136,35 +129,4 @@ namespace Truth
 		}
 #pragma endregion Inline
 	};
-
-	template<class Archive>
-	void Truth::Transform::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_position;
-		_ar& m_scale;
-		_ar& m_rotation;
-		_ar& m_localTM;
-		_ar& m_look;
-		if (file_version >= 1)
-		{
-			_ar& m_globalTM;
-		}
-	}
-
-	template<class Archive>
-	void Truth::Transform::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& boost::serialization::base_object<Component>(*this);
-		_ar& m_position;
-		_ar& m_scale;
-		_ar& m_rotation;
-		_ar& m_localTM;
-		_ar& m_look;
-
-		_ar& m_globalTM;
-	}
 }
-
-BOOST_CLASS_EXPORT_KEY(Truth::Transform)
-BOOST_CLASS_VERSION(Truth::Transform, 1)

@@ -7,8 +7,6 @@
 #include "Transform.h"
 #include "IBone.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Component)
-
 uint32 Truth::Component::m_IDGenerater = 0;
 
 Truth::Component::Component()

@@ -26,15 +26,6 @@ namespace Truth
 	{
 		GENERATE_CLASS_TYPE_INFO(Entity);
 
-	private:
-		friend class boost::serialization::access;
-
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
-
 		typedef std::vector<std::pair<std::weak_ptr<Component>, const Method*>> ComponentMethod;
 
 	protected:
@@ -194,37 +185,6 @@ namespace Truth
 		void IterateComponentMethod(ComponentMethod& _cm, Collider* _param);
 	};
 
-	/// template로 작성된 함수 목록
-	template<class Archive>
-	void Entity::save(Archive& _ar, const unsigned int _file_version) const
-	{
-		_ar& m_name;
-		_ar& m_layer;
-		_ar& m_components;
-		_ar& m_children;
-		_ar& m_linkBoneName;
-		_ar& m_isActive;
-	}
-
-	template<class Archive>
-	void Entity::load(Archive& _ar, const unsigned int _file_version)
-	{
-		_ar& m_name;
-		if (_file_version == 0)
-		{
-			_ar& m_ID;
-		}
-		_ar& m_layer;
-		_ar& m_components;
-		if (_file_version >= 2)
-			_ar& m_children;
-		if (_file_version >= 3)
-			_ar& m_linkBoneName;
-		if (_file_version >= 4)
-			_ar& m_isActive;
-
-	}
-
 	/// <summary>
 	/// 엔티티에 컴포넌트 추가
 	/// </summary>
@@ -315,4 +275,3 @@ namespace Truth
 		return result;
 	}
 }
-BOOST_CLASS_VERSION(Truth::Entity, 4)

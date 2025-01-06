@@ -36,14 +36,6 @@ namespace Truth
 		int32 m_index;
 		const uint32 m_ID;
 
-	private:
-		friend class boost::serialization::access;
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& _ar, const unsigned int _file_version) const;
-		template<class Archive>
-		void load(Archive& _ar, const unsigned int _file_version);
-
 		static uint32 m_IDGenerater;
 
 	protected:
@@ -183,20 +175,3 @@ namespace Truth
 #pragma endregion inline
 	};
 }
-template<class Archive>
-void Truth::Component::save(Archive& _ar, const unsigned int file_version) const
-{
-	_ar& m_name;
-	_ar& m_canMultiple;
-}
-
-template<class Archive>
-void Truth::Component::load(Archive& _ar, const unsigned int file_version)
-{
-	_ar& m_name;
-	_ar& m_canMultiple;
-}
-
-BOOST_SERIALIZATION_ASSUME_ABSTRACT(Truth::Component)
-BOOST_CLASS_EXPORT_KEY(Truth::Component)
-BOOST_CLASS_VERSION(Truth::Component, 0)

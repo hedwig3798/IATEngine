@@ -23,15 +23,7 @@ namespace Truth
 	{
 		GENERATE_CLASS_TYPE_INFO(Scene);
 
-	private:
-		friend class boost::serialization::access;
 		friend class LoadMapDataPopup;
-
-		BOOST_SERIALIZATION_SPLIT_MEMBER();
-		template<class Archive>
-		void save(Archive& ar, const unsigned int file_version) const;
-		template<class Archive>
-		void load(Archive& ar, const unsigned int file_version);
 
 	public:
 		PROPERTY(name);
@@ -115,35 +107,4 @@ namespace Truth
 		void ResetMapData();
 
 	};
-
-	template<class Archive>
-	void Truth::Scene::save(Archive& _ar, const unsigned int file_version) const
-	{
-		_ar& m_name;
-		_ar& m_rootEntities;
-		_ar& m_mapPath;
-		_ar& m_skyBox.generic_string();
-		_ar& m_useNavMesh;
-		_ar& m_brightness;
-	}
-
-	template<class Archive>
-	void Truth::Scene::load(Archive& _ar, const unsigned int file_version)
-	{
-		_ar& m_name;
-		_ar& m_rootEntities;
-		if (file_version >= 2)
-			_ar& m_mapPath;
-		if (file_version >= 3)
-		{
-			std::string path;
-			_ar& path;
-			m_skyBox = path;
-		}
-		if (file_version >= 4)
-			_ar& m_useNavMesh;
-		if (file_version >= 5)
-			_ar& m_brightness;
-	}
 }
-BOOST_CLASS_VERSION(Truth::Scene, 5)
