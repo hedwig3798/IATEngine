@@ -7,7 +7,6 @@
 #include "RigidBody.h"
 #include "Controller.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Collider)
 
 /// <summary>
 /// 콜라이더 생성자

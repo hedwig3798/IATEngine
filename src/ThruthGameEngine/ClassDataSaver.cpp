@@ -1,5 +1,4 @@
 #include "ClassDataSaver.h"
-#include "yaml-cpp/yaml.h"
 
 void Saver::SaveStart()
 {

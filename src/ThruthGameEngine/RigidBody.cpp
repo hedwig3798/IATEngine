@@ -5,8 +5,6 @@
 #include "Collider.h"
 #include "MathUtil.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::RigidBody)
-
 /// <summary>
 /// »ý¼ºÀÚ
 /// </summary>

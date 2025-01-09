@@ -4,7 +4,6 @@
 #include "MathUtil.h"
 #include "RigidBody.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::MeshCollider)
 
 Truth::MeshCollider::MeshCollider()
 	: Collider(false)

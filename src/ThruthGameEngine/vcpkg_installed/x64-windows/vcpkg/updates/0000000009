@@ -1,8 +1,0 @@
-Package: physx
-Version: 5.2.1
-Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
-Architecture: x64-windows
-Multi-Arch: same
-Abi: 2199a86c1ed36cd52a776d075b05f07e1e7f79ede16bd3d4983b4d1f0ca341ca
-Description: The NVIDIA PhysX SDK is a scalable multi-platform physics solution supporting a wide range of devices, from smartphones to high-end multicore CPUs and GPUs. This is the latest NVIDIA official version of the PhysX engine which also directly integrates into Omniverse. This port is NOT officially supported by NVIDIA.
-Status: install ok installed

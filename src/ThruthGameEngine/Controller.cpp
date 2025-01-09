@@ -7,7 +7,6 @@
 #include "Collider.h"
 #include "CapsuleCollider.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::Controller)
 
 Truth::Controller::Controller()
 	: m_controller(nullptr)

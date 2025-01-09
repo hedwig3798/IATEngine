@@ -1,11 +1,9 @@
 #include "CineCamera.h"
 #include "Camera.h"
 #include "MathUtil.h"
-#include <yaml-cpp/yaml.h>
 #include "GraphicsManager.h"
 #include "Transform.h"
-
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::CineCamera)
+#include "yaml-cpp/yaml.h"
 
 Truth::CineCamera::CineCamera()
 	: m_isMove(false)

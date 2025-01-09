@@ -25,6 +25,7 @@ namespace Truth
 		: public Component
 	{
 		GENERATE_CLASS_TYPE_INFO(Collider);
+		friend class Controller;
 
 	protected:
 		ColliderShape m_shape;

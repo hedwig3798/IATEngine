@@ -9,25 +9,25 @@
 #pragma warning(disable: 26495)
 #pragma warning(disable: 33010)
 #pragma warning(disable: 6297)
-#include "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/include/PxConfig.h"
-#include "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/include/PxPhysicsAPI.h"
+#include "PxConfig.h"
+#include "PxPhysicsAPI.h"
 #pragma warning(pop)
 
 #ifdef _DEBUG
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/LowLevel_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/LowLevelAABB_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/LowLevelDynamics_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysX_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXCharacterKinematic_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXCommon_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXCooking_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXExtensions_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXFoundation_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXPvdSDK_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXTask_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/PhysXVehicle_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/SceneQuery_static_64.lib")
-#pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/debug/lib/SimulationController_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\LowLevel_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\LowLevelAABB_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\LowLevelDynamics_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysX_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXCharacterKinematic_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXCommon_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXCooking_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXExtensions_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXFoundation_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXPvdSDK_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXTask_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\PhysXVehicle_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\SceneQuery_static_64.lib")
+#pragma comment(lib, "DebugLib\\physx\\SimulationController_static_64.lib")
 #else
 #pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/lib/LowLevel_static_64.lib")
 #pragma comment(lib, "../packages/NVIDIA.PhysX.4.1.229882250/installed/x64-windows/lib/LowLevelAABB_static_64.lib")

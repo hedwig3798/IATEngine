@@ -1,10 +1,10 @@
 #include "NavMeshGenerater.h"
-#include <recastnavigation/Recast.h>
-#include <recastnavigation/DetourNavMesh.h>
-#include <recastnavigation/DetourNavMeshBuilder.h>
-#include <recastnavigation/DetourDebugDraw.h>
-#include <recastnavigation/DetourCommon.h>
-#include <recastnavigation/DetourPathCorridor.h>
+#include "recastnavigator/Recast.h"
+#include "recastnavigator/DetourNavMesh.h"
+#include "recastnavigator/DetourNavMeshBuilder.h"
+#include "recastnavigator/DetourDebugDraw.h"
+#include "recastnavigator/DetourCommon.h"
+#include "recastnavigator/DetourPathCorridor.h"
 
 Truth::NavMeshGenerater::NavMeshGenerater()
 	: m_cellSize(0.3f)

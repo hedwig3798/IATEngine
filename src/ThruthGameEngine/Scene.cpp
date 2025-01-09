@@ -129,9 +129,7 @@ void Truth::Scene::DeleteEntity(std::shared_ptr<Entity> _p)
 /// <param name="_manager"></param>
 void Truth::Scene::Initalize(std::weak_ptr<Managers> _manager)
 {
-	clock_t start, finish;
 
-	start = clock();
 	if (m_managers.expired())
 		m_managers = _manager;
 
@@ -142,16 +140,7 @@ void Truth::Scene::Initalize(std::weak_ptr<Managers> _manager)
 		LoadEntity(e);
 	}
 
-	// LoadUnityData(m_mapPath);
-
 	m_managers.lock()->Graphics()->ChangeSkyBox(m_skyBox);
-
-	// 	finish = clock();
-	// 	std::string temp = std::to_string(finish - start);
-	// 
-	// 	temp = std::string("Loading : ") + temp;
-	// 	temp += " \n ";
-	// 	DEBUG_PRINT(temp.c_str());
 
 	m_managers.lock()->Graphics()->SetBrightness(m_brightness);
 

@@ -5,7 +5,6 @@
 #include "PhysicsManager.h"
 #include "MathUtil.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::BoxCollider)
 
 /// <summary>
 /// 큐브 형태의 콜라이더

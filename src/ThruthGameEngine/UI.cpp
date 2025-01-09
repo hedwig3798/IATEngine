@@ -5,10 +5,6 @@
 #include "ISprite.h"
 #include "InputManager.h"
 #include "ButtonBehavior.h"
-#include "..\EngineDemo\TitleUI.h"
-#include "..\EngineDemo\ClearUI.h"
-
-BOOST_CLASS_EXPORT_IMPLEMENT(Truth::UI)
 
 Truth::UI::UI()
 	: m_sprite()

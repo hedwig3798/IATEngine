@@ -6,7 +6,6 @@
 
 #include "Headers.h"
 #include <filesystem>
-#include <yaml-cpp/yaml.h>
 
 namespace fs = std::filesystem;
 

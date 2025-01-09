@@ -20,6 +20,8 @@ namespace Truth
 	{
 		GENERATE_CLASS_TYPE_INFO(RigidBody);
 
+		friend class Controller;
+
 	public:
 		PROPERTY(mass);
 		float m_mass;

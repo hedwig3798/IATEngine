@@ -274,7 +274,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Utils;$(SolutionDir)IdealGraphics\GraphicsEngine\public;$(SolutionDir)recastnavigation\Include;$(SolutionDir)Libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Utils;$(SolutionDir)IdealGraphics\GraphicsEngine\public;$(SolutionDir)recastnavigation\Include;$(SolutionDir)Libraries\include;$(SolutionDir)Libraries\include\physx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -288,8 +288,8 @@
     </Link>
     <Lib>
       <OutputFile>$(SolutionDir)Libraries\Debuglib\GameEngine\$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalDependencies>Debuglib\GraphicsEngine\IdealGraphics.lib;DebugUtils-d.lib;Detour-d.lib;DetourCrowd-d.lib;DetourTileCache-d.lib;Recast-d.lib;DebugLib\fmod\fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Debuglib\GraphicsEngine\IdealGraphics.lib;DebugLib\fmod\fmod_vc.lib;DebugLib\Yaml\Lib\yaml-cppd.lib;DebugLib\Recastnavigator\DebugUtils.lib;DebugLib\Recastnavigator\Detour.lib;DebugLib\Recastnavigator\DetourCrowd.lib;DebugLib\Recastnavigator\DetourTileCache.lib;DebugLib\Recastnavigator\Recast.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>

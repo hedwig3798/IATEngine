@@ -163,7 +163,10 @@ void Truth::InputManager::Update()
 	{
 		RECT rect;
 		::GetWindowRect(m_hwnd, &rect);
-		SetCursorPos((rect.right - rect.left) * 0.5f + rect.left, (rect.bottom - rect.top) * 0.5f + rect.top);
+		SetCursorPos(
+			static_cast<int>((rect.right - rect.left) * 0.5f + rect.left), 
+			static_cast<int>((rect.bottom - rect.top) * 0.5f + rect.top)
+		);
 
 		if (GetKeyState(KEY::M) == KEY_STATE::DOWN)
 		{
@@ -206,8 +209,8 @@ void Truth::InputManager::OnMouseMove(int _btnState, int _x, int _y)
 	{
 		RECT rect;
 		::GetWindowRect(m_hwnd, &rect);
-		m_oldMousePosX = (rect.right - rect.left) * 0.5f + rect.left;
-		m_oldMousePosY = (rect.bottom - rect.top) * 0.5f + rect.top;
+		m_oldMousePosX = static_cast<int>((rect.right - rect.left) * 0.5f + rect.left);
+		m_oldMousePosY = static_cast<int>((rect.bottom - rect.top) * 0.5f + rect.top);
 	}
 	else
 	{

@@ -3,7 +3,7 @@
 #include "GraphicsManager.h"
 #include "IParticleMaterial.h"
 #include "TimeManager.h"
-#include <yaml-cpp/yaml.h>
+#include "yaml-cpp/yaml.h"
 
 Truth::ParticleManager::ParticleManager()
 {
